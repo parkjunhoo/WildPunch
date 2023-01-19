@@ -1,0 +1,72 @@
+{
+    "playableCharacterInfos": [
+        {
+            "code": "0",
+            "name": "Leo",
+            "stat":
+            {
+                "level": "1",
+                "maxExp":"100",
+                "maxHp": "100",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"7.0",
+                "attackSpeed":"1.0",
+                "attackRange":"1.0",    
+                "critical":"0.0",
+                "luck":"0"
+            }
+        },
+        {
+            "code": "1",
+            "name": "Errol",
+            "stat":
+            {
+                "level": "1",
+                "maxExp":"100",
+                "maxHp": "100",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"7.0",
+                "attackSpeed":"1.0",
+                "attackRange":"1.0",    
+                "critical":"0.0",
+                "luck":"0"
+            }
+        },
+        {
+            "code": "2",
+            "name": "Gamon",
+            "stat":
+            {
+                "level": "1",
+                "maxExp":"100",
+                "maxHp": "100",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"7.0",
+                "attackSpeed":"1.0",
+                "attackRange":"1.0",    
+                "critical":"0.0",
+                "luck":"0"
+            }
+        },
+        {
+            "code": "3",
+            "name": "Valac",
+            "stat":
+            {
+                "level": "1",
+                "maxExp":"100",
+                "maxHp": "100",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"7.0",
+                "attackSpeed":"1.0",
+                "attackRange":"1.0",    
+                "critical":"0.0",
+                "luck":"0"
+            }
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "monsterInfos": [
+        {
+            "code": "0",
+            "name": "배트윙",
+            "stat":
+            {
+                "level": "1",
+                "maxHp": "40",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"2.0",
+                "expAmount":"10",
+                "goldAmount":"10"
+            }
+        },
+        {
+            "code": "1",
+            "name": "밴딧",
+            "stat":
+            {
+                "level": "1",
+                "maxHp": "40",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"2.0",
+                "expAmount":"10",
+                "goldAmount":"10"
+            }
+        },
+        {
+            "code": "2",
+            "name": "스캐버스",
+            "stat":
+            {
+                "level": "1",
+                "maxHp": "40",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"2.0",
+                "expAmount":"10",
+                "goldAmount":"10"
+            }
+        },
+        {
+            "code": "3",
+            "name": "비홀더",
+            "stat":
+            {
+                "level": "1",
+                "maxHp": "40",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"2.0",
+                "expAmount":"10",
+                "goldAmount":"10"
+            }
+        },
+        {
+            "code": "4",
+            "name": "고블린",
+            "stat":
+            {
+                "level": "1",
+                "maxHp": "40",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"2.0",
+                "expAmount":"10",
+                "goldAmount":"10"
+            }
+        },
+        {
+            "code": "5",
+            "name": "미스트",
+            "stat":
+            {
+                "level": "1",
+                "maxHp": "40",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"2.0",
+                "expAmount":"10",
+                "goldAmount":"10"
+            }
+        },
+        {
+            "code": "6",
+            "name": "스켈레톤",
+            "stat":
+            {
+                "level": "1",
+                "maxHp": "40",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"2.0",
+                "expAmount":"10",
+                "goldAmount":"10"
+            }
+        },
+        {
+            "code": "7",
+            "name": "구더기",
+            "stat":
+            {
+                "level": "1",
+                "maxHp": "40",
+                "attack":"10.0",
+                "defense":"1.0",
+                "moveSpeed":"2.0",
+                "expAmount":"10",
+                "goldAmount":"10"
+            }
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "itemInfos": [
+        {
+            "code": "0",
+            "tier":"0",
+            "name": "Shoes",
+            "subText":"이동속도가 3% 증가합니다.",
+            "price":"10",
+            "stat":
+            {
+                "moveSpeed":"0.03"
+            }
+        },
+        {
+            "code": "1",
+            "tier":"0",
+            "name": "Sword",
+            "subText":"공격력이 3% 증가합니다.",
+            "price":"10",
+            "stat":
+            {
+                "attack":"0.03"
+            }
+        },
+        {
+            "code": "2",
+            "tier":"0",
+            "name": "Glove",
+            "subText":"공격속도가 3% 증가합니다.",
+            "price":"10",
+            "stat":
+            {
+                "attackSpeed":"0.03"
+            }
+        },
+        {
+            "code": "3",
+            "tier":"0",
+            "name": "Shield",
+            "subText":"방어력이 3% 증가합니다.",
+            "price":"10",
+            "stat":
+            {
+                "defense":"0.03"
+            }
+        },
+        {
+            "code": "4",
+            "tier":"0",
+            "name": "Tomato",
+            "subText":"최대 체력이 5 증가합니다.",
+            "price":"10",
+            "stat":
+            {
+                "maxHp":"5"
+            }
+        },
+        {
+            "code": "5",
+            "tier":"0",
+            "name": "Clover",
+            "subText":"행운이 1 증가합니다.",
+            "price":"10",
+            "stat":
+            {
+                "luck":"1"
+            }
+        },
+        {
+            "code": "6",
+            "tier":"0",
+            "name": "Cookie",
+            "subText":"치명타율이 1 증가합니다.",
+            "price":"10",
+            "stat":
+            {
+                "critical":"1"
+            }
+        },
+        {
+            "code": "7",
+            "tier":"0",
+            "name": "Mashroom",
+            "subText":"공격범위가 3% 증가합니다. 미사일류 스킬 제외",
+            "price":"10",
+            "stat":
+            {
+                "attackRange":"0.03"
+            }
+        },
+        {
+            "code": "8",
+            "tier":"1",
+            "name": "Chocolate",
+            "subText":"체력이 30% 이하로 떨어졌을때, 이 아이템을 소모하고 체력을 10% 회복합니다.",
+            "price":"10",
+            "stat":
+            {
+                "regenHp":"0.1"
+            }
+        }
+    ]
+}

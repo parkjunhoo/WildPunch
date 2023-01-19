@@ -1,0 +1,577 @@
+{
+    "weaponInfos": [
+        {
+            "code": "0",
+            "name": "Pistol",
+            "synergy":["0", "8"],
+            "stat":
+            [
+                {
+                    "level": "1",
+                    "price": "10",
+                    "attack": "2",
+                    "maxTarget":"1",
+                    "coolTime": "0.5",
+                    "moveSpeed":"20.0",
+                    "attackRange":"10.0",
+                    "subText":"적에게 권총을 발사한다."
+                },
+                {
+                    "level": "2",
+                    "price": "20",
+                    "attack": "2.5",
+                    "maxTarget":"1",
+                    "coolTime": "0.5",
+                    "moveSpeed":"22.5",
+                    "attackRange":"12.0",
+                    "subText":"적에게 권총을 발사한다."
+                },
+                {
+                    "level": "3",
+                    "price": "40",
+                    "attack": "3",
+                    "maxTarget":"1",
+                    "coolTime": "0.5",
+                    "moveSpeed":"25.0",
+                    "attackRange":"13.0",
+                    "subText":"적에게 권총을 발사한다."
+                },
+                {
+                    "level": "4",
+                    "price": "80",
+                    "attack": "3.5",
+                    "maxTarget":"1",
+                    "coolTime": "0.5",
+                    "moveSpeed":"27.5",
+                    "attackRange":"14.0",
+                    "subText":"적에게 권총을 발사한다."
+                },
+                {
+                    "level": "5",
+                    "price": "160",
+                    "attack": "3",
+                    "maxTarget":"1",
+                    "coolTime": "0.3",
+                    "moveSpeed":"30.0",
+                    "attackRange":"15.0",
+                    "subText":"적에게 권총을 발사한다."
+                }
+            ]
+        },
+        {
+            "code": "1",
+            "name": "CaneOfThunder",
+            "synergy":["1","6"],
+            "stat":
+            [
+                {
+                    "level": "1",
+                    "price": "10",
+                    "attack": "1",
+                    "maxTarget":"2",
+                    "coolTime": "0.5",
+                    "moveSpeed":"25",
+                    "attackRange":"10.0",
+                    "penetration":"2",
+                    "subText":"2명의 적에게 전이되는 전류를 날린다."
+                },
+                {
+                    "level": "2",
+                    "price": "20",
+                    "attack": "1.2",
+                    "maxTarget":"3",
+                    "coolTime": "0.5",
+                    "moveSpeed":"25",
+                    "attackRange":"12.0",
+                    "penetration":"3",
+                    "subText":"3명의 적에게 전이되는 전류를 날린다."
+                },
+                {
+                    "level": "3",
+                    "price": "40",
+                    "attack": "1.4",
+                    "maxTarget":"4",
+                    "coolTime": "0.5",
+                    "moveSpeed":"25.0",
+                    "attackRange":"13.0",
+                    "penetration":"4",
+                    "subText":"4명의 적에게 전이되는 전류를 날린다."
+                },
+                {
+                    "level": "4",
+                    "price": "80",
+                    "attack": "1.6",
+                    "maxTarget":"5",
+                    "coolTime": "0.5",
+                    "moveSpeed":"25",
+                    "attackRange":"14.0",
+                    "penetration":"5",
+                    "subText":"5명의 적에게 전이되는 전류를 날린다."
+                },
+                {
+                    "level": "5",
+                    "price": "160",
+                    "attack": "2",
+                    "maxTarget":"5",
+                    "coolTime": "0.3",
+                    "moveSpeed":"30.0",
+                    "attackRange":"15.0",
+                    "penetration":"5",
+                    "subText":"5명의 적에게 전이되는 전류를 날린다."
+                }
+            ]
+        },
+        {
+            "code": "2",
+            "name": "CaneOfWater",
+            "synergy":["2","6"],
+            "stat":
+            [
+                {
+                    "level": "1",
+                    "price": "10",
+                    "attack": "0.3",
+                    "maxTarget":"5",
+                    "coolTime": "3",
+                    "attackTime": "2",
+                    "moveSpeed":"3",
+                    "attackRange":"5",
+                    "subText":"최대 5명 적들에게 물을 뿌려 데미지를 준다."
+                },
+                {
+                    "level": "2",
+                    "price": "20",
+                    "attack": "0.35",
+                    "maxTarget":"5",
+                    "coolTime": "3",
+                    "attackTime": "2",
+                    "moveSpeed":"3",
+                    "attackRange":"5",
+                    "subText":"최대 5명 적들에게 물을 뿌려 데미지를 준다."
+                },
+                {
+                    "level": "3",
+                    "price": "40",
+                    "attack": "0.4",
+                    "maxTarget":"5",
+                    "coolTime": "3",
+                    "attackTime": "2",
+                    "moveSpeed":"3",
+                    "attackRange":"5",
+                    "subText":"최대 5명 적들에게 물을 뿌려 데미지를 준다."
+                },
+                {
+                    "level": "4",
+                    "price": "80",
+                    "attack": "0.45",
+                    "maxTarget":"5",
+                    "coolTime": "3",
+                    "attackTime": "2",
+                    "moveSpeed":"3",
+                    "attackRange":"5",
+                    "subText":"최대 5명 적들에게 물을 뿌려 데미지를 준다."
+                },
+                {
+                    "level": "5",
+                    "price": "160",
+                    "attack": "1",
+                    "maxTarget":"5",
+                    "coolTime": "3",
+                    "attackTime": "2",
+                    "moveSpeed":"3",
+                    "attackRange":"5",
+                    "subText":"최대 5명 적들에게 물을 뿌려 데미지를 준다."
+                }
+            ]
+        },
+        {
+            "code": "3",
+            "name": "SteelSword",
+            "synergy":["0","7"],
+            "stat":
+            [
+                {
+                    "level": "1",
+                    "price": "10",
+                    "attack": "2",
+                    "maxTarget":"3",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"10.0",
+                    "attackRange":"3",
+                    "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>"
+                },
+                {
+                    "level": "2",
+                    "price": "20",
+                    "attack": "2.5",
+                    "maxTarget":"3",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"10.5",
+                    "attackRange":"3",
+                    "subText":"근처 적을 칼로벤다."
+                },
+                {
+                    "level": "3",
+                    "price": "40",
+                    "attack": "3",
+                    "maxTarget":"3",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"25.0",
+                    "attackRange":"3",
+                    "subText":"근처 적을 칼로벤다."
+                },
+                {
+                    "level": "4",
+                    "price": "80",
+                    "attack": "3.5",
+                    "maxTarget":"3",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"27.5",
+                    "attackRange":"3",
+                    "subText":"근처 적을 칼로벤다."
+                },
+                {
+                    "level": "5",
+                    "price": "160",
+                    "attack": "3",
+                    "maxTarget":"3",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"30.0",
+                    "attackRange":"3",
+                    "subText":"근처 적을 칼로벤다."
+                }
+            ]
+        },
+        {
+            "code": "4",
+            "name": "CaneOfFire",
+            "synergy":["3","6"],
+            "stat":
+            [
+                {
+                    "level": "1",
+                    "price": "10",
+                    "attack": "2",
+                    "maxTarget":"1",
+                    "coolTime": "5",
+                    "moveSpeed":"25",
+                    "attackRange":"10.0",
+                    "aoeScale":"1",
+                    "aoeTime":"2",
+                    "subText":"적에게 불덩이를 날리고 데미지를 주는 \\n <color=\"red\">5M</color>크기의 불 지형을 <color=\"green\">2초</color>동안 형성한다."
+                },
+                {
+                    "level": "2",
+                    "price": "20",
+                    "attack": "2.2",
+                    "maxTarget":"1",
+                    "coolTime": "5",
+                    "moveSpeed":"25",
+                    "attackRange":"12.0",
+                    "aoeScale":"1.02",
+                    "aoeTime":"3",
+                    "subText":"적에게 불덩이를 날리고 데미지를 주는 \\n <color=\"red\">5M</color>크기의 불 지형을 <color=\"green\">2초</color>동안 형성한다."
+                },
+                {
+                    "level": "3",
+                    "price": "40",
+                    "attack": "2.4",
+                    "maxTarget":"1",
+                    "coolTime": "5",
+                    "moveSpeed":"25.0",
+                    "attackRange":"13.0",
+                    "aoeScale":"1.04",
+                    "aoeTime":"4",
+                    "subText":"적에게 불덩이를 날리고 데미지를 주는 \\n <color=\"red\">5M</color>크기의 불 지형을 <color=\"green\">2초</color>동안 형성한다."
+                },
+                {
+                    "level": "4",
+                    "price": "80",
+                    "attack": "2.6",
+                    "maxTarget":"1",
+                    "coolTime": "5",
+                    "moveSpeed":"25",
+                    "attackRange":"14.0",
+                    "aoeScale":"1.06",
+                    "aoeTime":"5",
+                    "subText":"적에게 불덩이를 날리고 데미지를 주는 \\n <color=\"red\">5M</color>크기의 불 지형을 <color=\"green\">2초</color>동안 형성한다."
+                },
+                {
+                    "level": "5",
+                    "price": "160",
+                    "attack": "3",
+                    "maxTarget":"1",
+                    "coolTime": "3",
+                    "moveSpeed":"30.0",
+                    "attackRange":"15.0",
+                    "aoeScale":"1.1",
+                    "aoeTime":"3",
+                    "subText":"적에게 불덩이를 날리고 데미지를 주는 \\n <color=\"red\">5M</color>크기의 불 지형을 <color=\"green\">2초</color>동안 형성한다."
+                }
+            ]
+        },
+        {
+            "code": "5",
+            "name": "VampiricSword",
+            "synergy":["4","7"],
+            "stat":
+            [
+                {
+                    "level": "1",
+                    "price": "10",
+                    "attack": "2",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"20.0",
+                    "attackRange":"3",
+                    "drain" : "0.1",
+                    "subText":"1명의 적을 칼로 벤 데미지의 일정량을 HP로 흡수한다."
+                },
+                {
+                    "level": "2",
+                    "price": "20",
+                    "attack": "2.5",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"22.5",
+                    "attackRange":"3",
+                    "drain" : "0.12",
+                    "subText":"근처 적을 칼로 벤 데미지의 일정량을 HP로 흡수한다."
+                },
+                {
+                    "level": "3",
+                    "price": "40",
+                    "attack": "3",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"25.0",
+                    "attackRange":"3",
+                    "drain" : "0.14",
+                    "subText":"근처 적을 칼로 벤 데미지의 일정량을 HP로 흡수한다."
+                },
+                {
+                    "level": "4",
+                    "price": "80",
+                    "attack": "3.5",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"27.5",
+                    "attackRange":"3",
+                    "drain" : "0.16",
+                    "subText":"근처 적을 칼로 벤 데미지의 일정량을 HP로 흡수한다."
+                },
+                {
+                    "level": "5",
+                    "price": "160",
+                    "attack": "3",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"30.0",
+                    "attackRange":"3",
+                    "drain" : "0.2",
+                    "subText":"근처 적을 칼로 벤 데미지의 일정량을 HP로 흡수한다."
+                }
+            ]
+            
+        },
+        {
+            "code": "6",
+            "name": "Rifle",
+            "synergy":["0", "8"],
+            "stat":
+            [
+                {
+                    "level": "1",
+                    "price": "10",
+                    "attack": "0.2",
+                    "maxTarget":"1",
+                    "coolTime": "0.1",
+                    "moveSpeed":"20.0",
+                    "attackRange":"10.0",
+                    "subText":"적에게 소총을 발사한다."
+                },
+                {
+                    "level": "2",
+                    "price": "20",
+                    "attack": "0.25",
+                    "maxTarget":"1",
+                    "coolTime": "0.1",
+                    "moveSpeed":"22.5",
+                    "attackRange":"12.0",
+                    "subText":"적에게 소총을 발사한다."
+                },
+                {
+                    "level": "3",
+                    "price": "40",
+                    "attack": "0.3",
+                    "maxTarget":"1",
+                    "coolTime": "0.1",
+                    "moveSpeed":"25.0",
+                    "attackRange":"13.0",
+                    "subText":"적에게 소총을 발사한다."
+                },
+                {
+                    "level": "4",
+                    "price": "80",
+                    "attack": "0.35",
+                    "maxTarget":"1",
+                    "coolTime": "0.1",
+                    "moveSpeed":"27.5",
+                    "attackRange":"14.0",
+                    "subText":"적에게 소총을 발사한다."
+                },
+                {
+                    "level": "5",
+                    "price": "160",
+                    "attack": "0.4",
+                    "maxTarget":"1",
+                    "coolTime": "0.1",
+                    "moveSpeed":"30.0",
+                    "attackRange":"15.0",
+                    "subText":"적에게 소총을 발사한다."
+                }
+            ]
+        },
+        {
+            "code": "7",
+            "name": "Sniper",
+            "synergy":["0", "8"],
+            "stat":
+            [
+                {
+                    "level": "1",
+                    "price": "10",
+                    "attack": "10",
+                    "maxTarget":"0",
+                    "coolTime": "5",
+                    "moveSpeed":"50.0",
+                    "attackRange":"100",
+                    "subText":"가장 멀리있는 적에게 저격총을 발사한다. 가장 멀리있는 적에겐 100%의 데미지를 주고 탄환이 날아가는 도중 맞는 적에겐 50%의 데미지를 준다."
+                },
+                {
+                    "level": "2",
+                    "price": "20",
+                    "attack": "10",
+                    "maxTarget":"0",
+                    "coolTime": "5",
+                    "moveSpeed":"50.5",
+                    "attackRange":"100",
+                    "subText":"적에게 저격총을 발사한다."
+                },
+                {
+                    "level": "3",
+                    "price": "40",
+                    "attack": "10",
+                    "maxTarget":"0",
+                    "coolTime": "0.1",
+                    "moveSpeed":"50.0",
+                    "attackRange":"100",
+                    "subText":"적에게 저격총을 발사한다."
+                },
+                {
+                    "level": "4",
+                    "price": "80",
+                    "attack": "10",
+                    "maxTarget":"0",
+                    "coolTime": "0.1",
+                    "moveSpeed":"50.5",
+                    "attackRange":"100",
+                    "subText":"적에게 저격총을 발사한다."
+                },
+                {
+                    "level": "5",
+                    "price": "160",
+                    "attack": "10",
+                    "maxTarget":"0",
+                    "coolTime": "0.1",
+                    "moveSpeed":"50.0",
+                    "attackRange":"100",
+                    "subText":"적에게 저격총을 발사한다."
+                }
+            ]
+        },
+        {
+            "code": "8",
+            "name": "ThiefSword",
+            "synergy":["5","7"],
+            "stat":
+            [
+                {
+                    "level": "1",
+                    "price": "10",
+                    "attack": "2",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"20.0",
+                    "attackRange":"3",
+                    "dropGold":"5",
+                    "dropPercent" : "0.01",
+                    "subText":"1명의 적에게 <color=\"green\">200%</color>의 데미지를 주고 \n <color=\"yellow\">1%</color>의 확률로 <color=\"yellow\">5</color>골드를 드랍 시킨다."
+                },
+                {
+                    "level": "2",
+                    "price": "20",
+                    "attack": "2.5",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"22.5",
+                    "attackRange":"3",
+                    "dropGold":"6",
+                    "dropPercent" : "0.03",
+                    "subText":"근처 적을 칼로 베고 일정 확률로 골드를 드랍시킨다."
+                },
+                {
+                    "level": "3",
+                    "price": "40",
+                    "attack": "3",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"25.0",
+                    "attackRange":"3",
+                    "dropGold":"7",
+                    "dropPercent" : "0.05",
+                    "subText":"근처 적을 칼로 베고 일정 확률로 골드를 드랍시킨다."
+                },
+                {
+                    "level": "4",
+                    "price": "80",
+                    "attack": "3.5",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"27.5",
+                    "attackRange":"3",
+                    "dropGold":"8",
+                    "dropPercent" : "0.07",
+                    "subText":"근처 적을 칼로 베고 일정 확률로 골드를 드랍시킨다."
+                },
+                {
+                    "level": "5",
+                    "price": "160",
+                    "attack": "3",
+                    "maxTarget":"1",
+                    "coolTime": "1",
+                    "attackTime": "0.5",
+                    "moveSpeed":"30.0",
+                    "attackRange":"3",
+                    "dropGold":"9",
+                    "dropPercent" : "0.15",
+                    "subText":"근처 적을 칼로 베고 일정 확률로 골드를 드랍시킨다."
+                }
+            ]
+        }
+    ]
+}

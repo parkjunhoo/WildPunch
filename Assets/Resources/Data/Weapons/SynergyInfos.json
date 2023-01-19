@@ -1,0 +1,242 @@
+{
+    "synergyInfos": [
+        {
+            "code": "0",
+            "name": "Steel",
+            "stat":[
+                {
+                    "level":"1",
+                    "needAmount":"2",
+                    "value":"10",
+                    "amount":"10",
+                    "subText":"10초에 한번씩 피해를 10만큼 막는 보호막을 생성한다.",
+                    "color":"Red"
+                },
+                {
+                    "level":"2",
+                    "needAmount":"3",
+                    "value":"5",
+                    "amount":"10",
+                    "subText":"10초에 한번씩 피해를 15만큼 막는 보호막을 생성한다."
+                },
+                {
+                    "level":"3",
+                    "needAmount":"5",
+                    "value":"5",
+                    "amount":"20",
+                    "subText":"5초에 한번씩 피해를 20만큼 막는 보호막을 생성한다."
+                }
+            ]
+        },
+        {
+            "code": "1",
+            "name": "Thunder",
+            "stat":[
+                {
+                    "level":"1",
+                    "needAmount":"2",
+                    "value":"0.5",
+                    "amount":"0.07",
+                    "subText":"전기 공격이 7%확률로 0.5초간 적을 기절 시킵니다."
+                },
+                {
+                    "level":"2",
+                    "needAmount":"3",
+                    "value":"0.7",
+                    "amount":"0.15",
+                    "subText":"전기 공격이 15%확률로 0.7초간 적을 기절 시킵니다."
+                },
+                {
+                    "level":"3",
+                    "needAmount":"5",
+                    "value":"1",
+                    "amount":"0.3",
+                    "subText":"전기 공격이 30%확률로 0.5초간 적을 기절 시킵니다."
+                }
+            ]
+        },
+        {
+            "code": "2",
+            "name": "Water",
+            "stat":[
+                {
+                    "level":"1",
+                    "needAmount":"2",
+                    "amount":"10",
+                    "subText":"물 공격이 적의 이동속도를 10%만큼 늦춥니다."
+                },
+                {
+                    "level":"2",
+                    "needAmount":"3",
+                    "amount":"20",
+                    "subText":"물 공격이 적의 이동속도를 20%만큼 늦춥니다."
+                },
+                {
+                    "level":"3",
+                    "needAmount":"5",
+                    "amount":"30",
+                    "subText":"물 공격이 적의 이동속도를 30%만큼 늦춥니다."
+                }
+            ]
+        },
+        {
+            "code": "3",
+            "name": "Fire",
+            "stat":[
+                {
+                    "level":"1",
+                    "needAmount":"2",
+                    "value":"0.07",
+                    "amount":"0.5",
+                    "subText":"화염 공격이 7% 확률로 적을 불태워 50%의 추가피해를 입힙니다."
+                },
+                {
+                    "level":"2",
+                    "needAmount":"3",
+                    "value":"0.15",
+                    "amount":"0.75",
+                    "subText":"화염 공격이 15% 확률로 적을 불태워 75%의 추가피해를 입힙니다."
+                },
+                {
+                    "level":"3",
+                    "needAmount":"5",
+                    "value":"0.3",
+                    "amount":"1.5",
+                    "subText":"화염 공격이 30% 확률로 적을 불태워 150%의 추가피해를 입힙니다."
+                }
+            ]
+        },
+        {
+            "code": "4",
+            "name": "Vampire",
+            "stat":[
+                {
+                    "level":"1",
+                    "needAmount":"2",
+                    "value":"100",
+                    "amount":"1",
+                    "subText":"적을 100마리 처치할 때 마다, 최대 체력이 1증가 합니다."
+                },
+                {
+                    "level":"2",
+                    "needAmount":"3",
+                    "value":"100",
+                    "amount":"2",
+                    "subText":"적을 100마리 처치할 때 마다, 최대 체력이 2증가 합니다."
+                },
+                {
+                    "level":"3",
+                    "needAmount":"5",
+                    "value":"100",
+                    "amount":"5",
+                    "subText":"적을 100마리 처치할 때 마다, 최대 체력이 5증가 합니다."
+                }
+            ]
+        },
+        {
+            "code": "5",
+            "name": "Thief",
+            "stat":[
+                {
+                    "level":"1",
+                    "needAmount":"2",
+                    "value":"100",
+                    "amount":"5",
+                    "subText":"적을 100마리 처치할 때 마다, 5골드를 추가로 얻습니다."
+                },
+                {
+                    "level":"2",
+                    "needAmount":"3",
+                    "value":"100",
+                    "amount":"10",
+                    "subText":"적을 100마리 처치할 때 마다, 10골드를 추가로 얻습니다."
+                },
+                {
+                    "level":"3",
+                    "needAmount":"5",
+                    "value":"100",
+                    "amount":"20",
+                    "subText":"적을 100마리 처치할 때 마다, 20골드를 추가로 얻습니다."
+                }
+            ]
+        },
+        {
+            "code": "6",
+            "name": "Cane",
+            "stat":[
+                {
+                    "level":"1",
+                    "needAmount":"2",
+                    "value":"10",
+                    "amount":"0.5",
+                    "subText":"10초마다 50%의 광역 데미지를 입히는 마법이 발동됩니다."
+                },
+                {
+                    "level":"2",
+                    "needAmount":"3",
+                    "value":"10",
+                    "amount":"200",
+                    "subText":"10초마다 200%의 광역 데미지를 입히는 마법이 발동됩니다."
+                },
+                {
+                    "level":"3",
+                    "needAmount":"6",
+                    "value":"10",
+                    "amount":"200",
+                    "subText":"10초마다 200%의 광역 데미지를 입히는 마법이 발동됩니다."
+                }
+            ]
+        },
+        {
+            "code": "7",
+            "name": "Sword",
+            "stat":[
+                {
+                    "level":"1",
+                    "needAmount":"2",
+                    "amount":"0.15%",
+                    "subText":"검 자체에도 적과 충돌 시 15%의 데미지를 줍니다."
+                },
+                {
+                    "level":"2",
+                    "needAmount":"3",
+                    "amount":"0.3%",
+                    "subText":"검 자체에도 적과 충돌 시 30%의 데미지를 줍니다."
+                },
+                {
+                    "level":"3",
+                    "needAmount":"5",
+                    "amount":"0.5%",
+                    "subText":"검 자체에도 적과 충돌 시 50%의 데미지를 줍니다."
+                }
+            ]
+        },
+        {
+            "code": "8",
+            "name": "Gun",
+            "stat":[
+                {
+                    "level":"1",
+                    "needAmount":"2",
+                    "value":"1",
+                    "amount":"0.3",
+                    "subText":"30%의 공격력을 가진 터렛이 1개 소환됩니다."
+                },
+                {
+                    "level":"2",
+                    "needAmount":"3",
+                    "value":"2",
+                    "amount":"0.3",
+                    "subText":"30%의 공격력을 가진 터렛이 2개 소환됩니다."
+                },
+                {
+                    "level":"3",
+                    "needAmount":"5",
+                    "value":"4",
+                    "amount":"0.5",
+                    "subText":"50%의 공격력을 가진 터렛이 4개 소환됩니다."
+                }
+            ]
+        }
+    ]
+}

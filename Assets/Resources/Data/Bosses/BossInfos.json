@@ -1,0 +1,88 @@
+{
+    "bossInfos": [
+        {
+            "code": "0",
+            "name": "베놈",
+            "stat": {
+                "level": "1",
+                "maxHp": "10000",
+                "attack": "1.0",
+                "defense": "1.0",
+                "moveSpeed": "4.0",
+                "expAmount": "10",
+                "goldAmount": "10",
+                "diamondAmount" :  "2"
+            }
+        },
+        {
+            "code": "1",
+            "name": "슬라임",
+            "stat": {
+                "level": "1",
+                "maxHp": "10000",
+                "attack": "1.0",
+                "defense": "1.0",
+                "moveSpeed": "4.0",
+                "expAmount": "10",
+                "goldAmount": "10",
+                "diamondAmount" :  "2"
+            }
+        },
+        {
+            "code": "2",
+            "name": "외눈박이",
+            "stat": {
+                "level": "1",
+                "maxHp": "10000",
+                "attack": "1.0",
+                "defense": "1.0",
+                "moveSpeed": "4.0",
+                "expAmount": "10",
+                "goldAmount": "10",
+                "diamondAmount" :  "2"
+            }
+        },
+        {
+            "code": "3",
+            "name": "오크",
+            "stat": {
+                "level": "1",
+                "maxHp": "10000",
+                "attack": "1.0",
+                "defense": "1.0",
+                "moveSpeed": "4.0",
+                "expAmount": "10",
+                "goldAmount": "10",
+                "diamondAmount" :  "2"
+            }
+        },
+        {
+            "code": "4",
+            "name": "좀비",
+            "stat": {
+                "level": "1",
+                "maxHp": "10000",
+                "attack": "1.0",
+                "defense": "1.0",
+                "moveSpeed": "4.0",
+                "expAmount": "10",
+                "goldAmount": "10",
+                "diamondAmount" :  "2"
+            }
+        },
+        {
+            "code": "5",
+            "name": "아브락사스",
+            "stat": {
+                "level": "1",
+                "maxHp": "10000",
+                "attack": "1.0",
+                "defense": "1.0",
+                "moveSpeed": "4.0",
+                "expAmount": "10",
+                "goldAmount": "10",
+                "diamondAmount" :  "2"
+            }
+        }
+    ]
+}   

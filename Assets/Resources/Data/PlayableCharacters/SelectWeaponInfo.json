@@ -1,0 +1,10 @@
+{
+    "selectWeaponInfo": {
+        "itemCode": "1",
+        "ableItems": [
+            "0",
+            "1",
+            "2"
+        ]
+    }
+}
