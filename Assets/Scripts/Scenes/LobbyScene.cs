@@ -8,9 +8,23 @@ public class LobbyScene : BaseScene
     {
         base.Init();
 
-        Managers.Sound.Play("BGM/LobbyBGM",Define.Sound.Bgm);
+        Loading();
     }
 
+
+    void Loading()
+    {
+        CashResources();
+
+        //Util.CashedPrefabInstantiate("UI_Lobby");
+        Managers.Sound.Play(Managers.Data.GetCashedSound("LobbyBGM"), Define.Sound.Bgm);
+    }
+
+    void CashResources()
+    {
+        Managers.Data.CashPrefab(Managers.Resource.LoadAll<GameObject>("Prefabs"));
+        Managers.Data.CashSound(Managers.Resource.LoadAll<AudioClip>("Sounds"));
+    }
     public override void Clear()
     {
 
