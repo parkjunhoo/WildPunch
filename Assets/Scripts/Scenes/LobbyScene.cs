@@ -22,8 +22,11 @@ public class LobbyScene : BaseScene
 
     void CashResources()
     {
-        Managers.Data.CashPrefab(Managers.Resource.LoadAll<GameObject>("Prefabs"));
+        Managers.Data.CashSprite(Managers.Resource.LoadAll<Sprite>("Sprites/Backgrounds"));
+        Managers.Data.CashSprite(Managers.Resource.LoadAll<Sprite>("Sprites/UI"));
         Managers.Data.CashSound(Managers.Resource.LoadAll<AudioClip>("Sounds"));
+        Managers.Data.CashPrefab(Managers.Resource.LoadAll<GameObject>("Prefabs"));
+        
     }
     public override void Clear()
     {
