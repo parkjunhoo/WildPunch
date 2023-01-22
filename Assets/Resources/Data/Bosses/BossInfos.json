@@ -2,7 +2,7 @@
     "bossInfos": [
         {
             "code": "0",
-            "name": "베놈",
+            "name": "슬라임",
             "stat": {
                 "level": "1",
                 "maxHp": "10000",
@@ -16,7 +16,7 @@
         },
         {
             "code": "1",
-            "name": "슬라임",
+            "name": "베놈",
             "stat": {
                 "level": "1",
                 "maxHp": "10000",

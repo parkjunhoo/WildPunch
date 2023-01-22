@@ -34,6 +34,7 @@ public class UI_Lobby : UI_Scene
                     UI_TabToStart.SetActive(false);
                     s_isStart = true;
                     UI_MainLobby.SetActive(true);
+                    Managers.Sound.Play("BGM/LobbyBGM",Define.Sound.Bgm);
                 }));
             });
         }

@@ -17,7 +17,7 @@ public class LobbyScene : BaseScene
         CashResources();
 
         //Util.CashedPrefabInstantiate("UI_Lobby");
-        Managers.Sound.Play(Managers.Data.GetCashedSound("LobbyBGM"), Define.Sound.Bgm);
+        Managers.Sound.Play(Managers.Data.GetCashedSound("LobbyBGM2"), Define.Sound.Bgm);
     }
 
     void CashResources()
