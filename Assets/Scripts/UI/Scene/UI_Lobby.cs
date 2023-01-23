@@ -1,7 +1,11 @@
+using Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class UI_Lobby : UI_Scene
 {
@@ -11,8 +15,10 @@ public class UI_Lobby : UI_Scene
         UI_TabToStart,
         UI_MainLobby,
     }
-    GameObject UI_TabToStart , UI_MainLobby;
+    GameObject UI_TabToStart, UI_MainLobby;
     Animator UI_LobbyAnim , UI_TabToStartAnim;
+
+
 
     public override void Init()
     {
@@ -20,7 +26,8 @@ public class UI_Lobby : UI_Scene
         UI_LobbyAnim = GetComponent<Animator>();
         UI_MainLobby = GetObject((int)GameObjects.UI_MainLobby);
         UI_TabToStart = GetObject((int)GameObjects.UI_TabToStart);
-        if(!s_isStart)
+        
+        if (!s_isStart)
         {
             UI_MainLobby.SetActive(false);
             UI_TabToStartAnim = UI_TabToStart.GetComponent<Animator>();
@@ -43,8 +50,6 @@ public class UI_Lobby : UI_Scene
             UI_MainLobby.SetActive(true);
             UI_TabToStart.SetActive(false);
         }
-
-        
     }
 
     IEnumerator WaitForSec(float sec , Action act)
@@ -52,5 +57,7 @@ public class UI_Lobby : UI_Scene
         yield return new WaitForSecondsRealtime(sec);
         act.Invoke();
     }
-   
+
+
+
 }

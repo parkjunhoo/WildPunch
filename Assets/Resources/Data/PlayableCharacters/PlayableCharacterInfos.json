@@ -2,7 +2,8 @@
     "playableCharacterInfos": [
         {
             "code": "0",
-            "name": "Leo",
+            "name": "레오",
+            "subText":"레오는 재빠른 반사신경과 유연성을 갖춘\\n 호기심 많은 고양이입니다.",
             "stat":
             {
                 "level": "1",
@@ -19,7 +20,8 @@
         },
         {
             "code": "1",
-            "name": "Errol",
+            "name": "아우라",
+            "subText":"아우라는 재빠른 반사신경과 유연성을 갖춘\\n 호기심 많은 고양이입니다.",
             "stat":
             {
                 "level": "1",
@@ -36,7 +38,8 @@
         },
         {
             "code": "2",
-            "name": "Gamon",
+            "name": "가몬",
+            "subText":"가몬은 재빠른 반사신경과 유연성을 갖춘\\n 호기심 많은 고양이입니다.",
             "stat":
             {
                 "level": "1",
@@ -53,7 +56,8 @@
         },
         {
             "code": "3",
-            "name": "Valac",
+            "name": "발락",
+            "subText":"발락은 재빠른 반사신경과 유연성을 갖춘\\n 호기심 많은 고양이입니다.",
             "stat":
             {
                 "level": "1",

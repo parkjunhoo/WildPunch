@@ -1,18 +1,17 @@
 {
-    "userData": {
-        "level": "12",
-        "exp": "60",
-        "gold": 66,
-        "gem": 123,
-        "ableCharacters": [
-            "0",
-            "1",
-            "2"
-        ],
-        "ableWeapons": [
-            "0",
-            "1",
-            "2"
-        ]
-    }
+    "level": "1",
+    "exp": "0",
+    "gold": "0",
+    "gem": "0",
+    "ableStages": [
+        "0"
+    ],
+    "ableCharacters": [
+        "0",
+        "1",
+        "3"
+    ],
+    "ableWeapons": [
+        "0"
+    ]
 }

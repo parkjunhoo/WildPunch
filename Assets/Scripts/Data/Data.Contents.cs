@@ -15,6 +15,7 @@ namespace Data
     {
         public string code;
         public string name;
+        public string subText;
         public PlayableCharacterStat stat;
     }
 
@@ -314,30 +315,31 @@ namespace Data
     [Serializable]
     public class UserData
     {
-        public string level;
-        public string exp;
+        public int level;
+        public int exp;
 
         public int gold;
         public int gem;
 
+        public List<string> ableStage;
         public List<string> ableCharacters;
         public List<string> ableWeapons;
 
     }
 
-    public class UserDataInfo : ILoader<string, UserData>
-    {
-        public UserData userData = new UserData();
+    //public class UserDataInfo : ILoader<string, UserData>
+    //{
+    //    public UserData userData = new UserData();
 
-        public Dictionary<string, UserData> MakeDict()
-        {
-            Dictionary<string, UserData> dict = new Dictionary<string, UserData>();
-            string json = JsonUtility.ToJson(userData, true);
-            Debug.Log("json :: " + json);
-            dict.Add("userData", userData);
-            return dict;
-        }
-    }
+    //    public Dictionary<string, UserData> MakeDict()
+    //    {
+    //        Dictionary<string, UserData> dict = new Dictionary<string, UserData>();
+    //        string json = JsonUtility.ToJson(userData, true);
+    //        Debug.Log("json :: " + json);
+    //        dict.Add("userData", userData);
+    //        return dict;
+    //    }
+    //}
     #endregion
 
 }

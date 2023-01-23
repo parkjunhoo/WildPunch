@@ -1,5 +1,6 @@
 using Data;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,9 +9,9 @@ using UnityEngine.UI;
 
 public class UI_SelectView : UI_Base
 {
-    static string s_SelectStageCode = "0";
+    public static string s_SelectStageCode = "0";
     static int s_SelectStageIndex = 0;
-    public string SelectStageCode
+    public  string SelectStageCode
     {
         get { return s_SelectStageCode; }
         set 
@@ -29,12 +30,29 @@ public class UI_SelectView : UI_Base
             StageCarousel.UI_StageCarousel.Index = s_SelectStageIndex;
         }
     }
-    static string s_SelectCharacterCode = "0";
 
+
+
+    public static string s_SelectCharacterCode = "0";
+    public string SelectCharacterCode
+    {
+        get { return s_SelectCharacterCode; }
+        set
+        {
+            s_SelectCharacterCode = value;
+            if (OnSelectCharacterChanged != null) OnSelectCharacterChanged.Invoke();
+            RefreshCharacterView();
+        }
+    }
+    public static Action OnSelectCharacterChanged = null;
 
     Dictionary<string, StageInfo> _stageDict;
     List<string> _stageCodeList;
-    
+
+    Dictionary<string, PlayableCharacterInfo> _characterDict;
+
+
+
     public enum GameObjects
     {
         UI_StageCarousel,
@@ -42,16 +60,21 @@ public class UI_SelectView : UI_Base
         StageNextBtn,
 
         UI_MonsterList,
+        UI_CharacterList,
+        ChracterArea,
     }
-    GameObject UI_StageCarousel, StagePreBtn, StageNextBtn, UI_MonsterList;
+    GameObject UI_StageCarousel, StagePreBtn, StageNextBtn, UI_MonsterList, UI_CharacterList, ChracterArea;
     Animator StagePreBtnAnim, StageNextBtnAnim;
 
     public enum Texts
     {
         StageNameText,
         StageSubText,
+
+        CharacterNameText,
+        CharacterSubText,
     }
-    TextMeshProUGUI StageNameText, StageSubText;
+    TextMeshProUGUI StageNameText, StageSubText, CharacterNameText, CharacterSubText;
 
     public enum Images
     {
@@ -71,10 +94,16 @@ public class UI_SelectView : UI_Base
         StageNextBtnAnim = StageNextBtn.GetComponent<Animator>();
 
         UI_MonsterList = GetObject((int)GameObjects.UI_MonsterList);
+        UI_CharacterList = GetObject((int)GameObjects.UI_CharacterList);
+
+        ChracterArea = GetObject((int)GameObjects.ChracterArea);
 
         Bind<TextMeshProUGUI>(typeof(Texts));
         StageNameText = GetMeshText((int)Texts.StageNameText);
         StageSubText = GetMeshText((int)Texts.StageSubText);
+
+        CharacterNameText = GetMeshText((int)Texts.CharacterNameText);
+        CharacterSubText = GetMeshText((int)Texts.CharacterSubText);
 
 
         Bind<Image>(typeof(Images));
@@ -85,11 +114,11 @@ public class UI_SelectView : UI_Base
         _stageCodeList = new List<string>();
         StageCarouselListUp();
 
+        _characterDict = Managers.Data.PlayableCharacterDict;
+        CharacterListUp();
 
 
         RefreshStageView();
-
-
 
         BindEvent(StagePreBtn, (PointerEventData) =>
         {
@@ -114,6 +143,38 @@ public class UI_SelectView : UI_Base
             go.GetComponent<UI_StageBtn>().Setting(stageInfo.code);
         }
     }
+
+    public void CharacterListUp()
+    {
+        foreach(PlayableCharacterInfo characterInfo in Managers.Data.PlayableCharacterDict.Values)
+        {
+            GameObject characterImage = Util.CashedPrefabInstantiate($"UI_Character{characterInfo.code}", ChracterArea.transform);
+            UI_Character characterImageCom = characterImage.GetComponent<UI_Character>();
+            //characterImageCom.Setting(characterInfo.code);
+            characterImageCom.HoldingCode = characterInfo.code;
+            characterImage.SetActive(characterInfo.code == s_SelectCharacterCode);
+
+            GameObject go = Util.CashedPrefabInstantiate("UI_CharacterSelectBtn", UI_CharacterList.transform);
+            UI_CharacterSelectBtn btn = go.GetComponent<UI_CharacterSelectBtn>();
+            btn.Setting(characterInfo.code);
+
+            BindEvent(go , (PointerEventData) =>
+            {
+                if (btn.IsUnLocked)
+                {
+                    if(btn.HoldingCode != s_SelectCharacterCode)
+                    {
+                        SelectCharacterCode = characterInfo.code;
+                        Managers.Sound.Play(Managers.Data.GetCashedSound("ClickBoing"));
+                    }
+                }
+                else
+                {
+                    Managers.Sound.Play(Managers.Data.GetCashedSound("UnLock"));
+                }
+            });
+        }
+    }
     public void RefreshStageView()
     {
         StageInfo stageInfo = _stageDict[s_SelectStageCode];
@@ -135,6 +196,12 @@ public class UI_SelectView : UI_Base
             GameObject go = Util.CashedPrefabInstantiate("UI_MonsterListItem", UI_MonsterList.transform);
             go.GetComponent<UI_MonsterListItem>().Setting(stageInfo.spawnMonsters[i]);
         }
-        
+    }
+
+    public void RefreshCharacterView()
+    {
+        PlayableCharacterInfo chracterInfo = _characterDict[s_SelectCharacterCode];
+        CharacterNameText.text = chracterInfo.name;
+        CharacterSubText.text = chracterInfo.subText;
     }
 }

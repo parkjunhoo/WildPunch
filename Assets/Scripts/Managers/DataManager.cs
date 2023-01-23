@@ -5,6 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization;
+using Data;
 
 public interface ILoader<Key, Value>
 {
@@ -85,6 +86,8 @@ public class DataManager
 
 
     #region UserDataMnager
+
+    public Action OnUserDataChanged = null;
     // 사용자 데이터 초기화 Init
     private void InitUserData()
     {
@@ -95,7 +98,7 @@ public class DataManager
         else
         {
             // 저장된게 없을경우 LoadJson 사용
-            UserDataDict = LoadJson<Data.UserDataInfo, string, Data.UserData>("Users/UserData").MakeDict();
+            UserDataList = JsonTo<Data.UserData>("Users/UserData");
             // 기본데이터 설정후 파일 저장
             SaveUserData();
         }
@@ -111,7 +114,8 @@ public class DataManager
             BinaryFormatter bf = new BinaryFormatter();
             try
             {
-                UserDataDict = (Dictionary<string, Data.UserData>)bf.Deserialize(file);
+                
+                UserDataList = (Data.UserData)bf.Deserialize(file);
             }
             catch (SerializationException e)
             {                
@@ -134,7 +138,7 @@ public class DataManager
         BinaryFormatter bf = new BinaryFormatter();
         try
         {                        
-            bf.Serialize(file, UserDataDict);
+            bf.Serialize(file, UserDataList);
         }
         catch (SerializationException e)
         {
@@ -145,6 +149,8 @@ public class DataManager
         {
             file.Close();
         }
+
+        if (OnUserDataChanged != null) OnUserDataChanged.Invoke();
     }
 
     public string GetSaveFileName()
@@ -156,6 +162,28 @@ public class DataManager
         // Windows Editor and Standalone Player: %userprofile%\AppData\LocalLow\<companyname>\<productname>
         return Application.persistentDataPath + "/" + "Save_N.dat";
     }
+
+
+
+    public void UserLevelUp()
+    {
+        UserDataList.exp = 0;
+        UserDataList.level = UserDataList.level + 1;
+        SaveUserData();
+    }
+    public void UserAddGold(int amount)
+    {
+        UserDataList.gold = UserDataList.gold + amount;
+        SaveUserData();
+    }
+    public void UserAddGem(int amount)
+    {
+        UserDataList.gem = UserDataList.gem + amount;
+        SaveUserData();
+    }
+
+
+
     #endregion
 
     public Dictionary<string, Data.PlayableCharacterInfo> PlayableCharacterDict { get; private set; } = new Dictionary<string, Data.PlayableCharacterInfo>();
@@ -166,7 +194,8 @@ public class DataManager
 
     public Dictionary<string, Data.StageInfo> StageDict { get; private set; } = new Dictionary<string, Data.StageInfo>();
     public Dictionary<string, Data.BossInfo> BossDict { get; private set; } = new Dictionary<string, Data.BossInfo>();
-    public Dictionary<string, Data.UserData> UserDataDict { get; private set; } = new Dictionary<string, Data.UserData>();
+    //public Dictionary<string, Data.UserData> UserDataDict { get; private set; } = new Dictionary<string, Data.UserData>();
+    public UserData UserDataList { get; private set; }
 
 
     public void Init()
@@ -179,9 +208,7 @@ public class DataManager
         BossDict = LoadJson<Data.BossInfoData, string, Data.BossInfo>("Bosses/BossInfos").MakeDict();
         StageDict = LoadJson<Data.StageInfoData, string, Data.StageInfo>("Stages/StageInfos").MakeDict();
 
-        //InitUserData();
-        //UserDataDict = LoadJson<Data.UserDataInfo, string, Data.UserData>("Users/UserData").MakeDict();
-
+        InitUserData();
     }
 
     Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>
@@ -190,5 +217,10 @@ public class DataManager
         return JsonUtility.FromJson<Loader>(textAsset.text);
     }
 
-
+    public T JsonTo<T>(string path)
+    {
+        TextAsset textAsset = Resources.Load<TextAsset>($"Data/{path}");
+        Debug.Log(textAsset.text);
+        return JsonUtility.FromJson<T>(textAsset.text);
+    }
 }
