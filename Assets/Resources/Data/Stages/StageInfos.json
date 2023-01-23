@@ -4,24 +4,24 @@
             "code": "0",
             "name": "검은 숲",
             "difficulty":"1",
-            "spawnMonsters":"['0','1','2']",
-            "boss":"['0','1']",
+            "spawnMonsters":["0","1","2"],
+            "boss":["0","1"],
             "stageSubText":"오래전 저주받은 지역인 검은 숲은 위험한 야생 동물들이 서식하고 있습니다."
         },
         {
             "code": "1",
             "name": "붉은바위 산",
             "difficulty":"3",
-            "spawnMonsters":"['3','4']",
-            "boss":"['2','3']",
+            "spawnMonsters":["3","4"],
+            "boss":["2","3"],
             "stageSubText":"다른 행성에서 온 오크족이 점령한 붉은바위 산에서는 언제나 투쟁을 벌이는 중 입니다."
         },
         {
             "code": "2",
             "name": "역병지대",
             "difficulty":"5",
-            "spawnMonsters":"['5','6','7']",
-            "boss":"['4','5']",
+            "spawnMonsters":["5","6","7"],
+            "boss":["4","5"],
             "stageSubText":"온갖 역병으로 풍요로웠던 도시는 역병지대로 변모했습니다. 변해버린 생물체들의 소굴이 되었습니다."
         }
     ]

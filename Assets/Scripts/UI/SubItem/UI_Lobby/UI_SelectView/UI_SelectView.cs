@@ -117,25 +117,23 @@ public class UI_SelectView : UI_Base
     public void RefreshStageView()
     {
         StageInfo stageInfo = _stageDict[s_SelectStageCode];
-        string[] bossCodes = JArray.Parse(stageInfo.boss).ToObject<string[]>();
-        string[] MonsterCodes = JArray.Parse(stageInfo.spawnMonsters).ToObject<string[]>();
 
         StageNameText.text = stageInfo.name;
         StageSubText.text = stageInfo.stageSubText;
 
 
-        BossImage.sprite = Managers.Data.GetCashedSprite($"UIBoss{bossCodes[0]}");
-        BossImage2.sprite = Managers.Data.GetCashedSprite($"UIBoss{bossCodes[1]}");
+        BossImage.sprite = Managers.Data.GetCashedSprite($"UIBoss{stageInfo.boss[0]}");
+        BossImage2.sprite = Managers.Data.GetCashedSprite($"UIBoss{stageInfo.boss[1]}");
 
         for(int i = 0; i<UI_MonsterList.transform.childCount; i++)
         {
             Managers.Resource.Destroy(UI_MonsterList.transform.GetChild(i).gameObject);
         }
 
-        for(int i = 0; i< MonsterCodes.Length; i++)
+        for(int i = 0; i< stageInfo.spawnMonsters.Count; i++)
         {
             GameObject go = Util.CashedPrefabInstantiate("UI_MonsterListItem", UI_MonsterList.transform);
-            go.GetComponent<UI_MonsterListItem>().Setting(MonsterCodes[i]);
+            go.GetComponent<UI_MonsterListItem>().Setting(stageInfo.spawnMonsters[i]);
         }
         
     }

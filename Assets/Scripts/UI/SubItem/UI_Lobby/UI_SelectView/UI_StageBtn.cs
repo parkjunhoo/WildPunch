@@ -27,9 +27,9 @@ public class UI_StageBtn : UI_Base
 
     public void Setting(string stageCode)
     {
-        string[] bossList = JArray.Parse(Managers.Data.StageDict[stageCode].boss).ToObject<string[]>();
+        //string[] bossList = JArray.Parse(Managers.Data.StageDict[stageCode].boss).ToObject<string[]>();
 
-        StageFrameImage.sprite = Managers.Data.GetCashedSprite($"UIBoss{bossList[1]}");
+        StageFrameImage.sprite = Managers.Data.GetCashedSprite($"BackgroundFrame{stageCode}");
         StageImage.sprite = Managers.Data.GetCashedSprite($"StageBackground{stageCode}");
     }
     

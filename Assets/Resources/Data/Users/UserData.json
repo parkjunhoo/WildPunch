@@ -1,16 +1,15 @@
 {
     "userData": {
-        "code": "0",
-        "id": "0st2gd52340g",
-        "nickName": "박준후",
-        "email": "naver@naver.com",
         "level": "12",
-        "exp": "10",
-        "thunder": 100000,
-        "diamon": 500,
-        "medal": 20000,
-        "itemCode": "3",
-        "ableItems": [
+        "exp": "60",
+        "gold": 66,
+        "gem": 123,
+        "ableCharacters": [
+            "0",
+            "1",
+            "2"
+        ],
+        "ableWeapons": [
             "0",
             "1",
             "2"

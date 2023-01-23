@@ -249,8 +249,8 @@ namespace Data
         public string name;
         public int difficulty;
 
-        public string spawnMonsters;
-        public string boss;
+        public List<string> spawnMonsters;
+        public List<string> boss;
         public string stageSubText;
     }
 
@@ -314,19 +314,14 @@ namespace Data
     [Serializable]
     public class UserData
     {
-        public string code;
-        public string id;
-        public string nickName;
-        public string email;
         public string level;
         public string exp;
 
-        public int thunder;
-        public int diamon;
-        public int medal;
+        public int gold;
+        public int gem;
 
-        public string itemCode;
-        public List<string> ableItems;
+        public List<string> ableCharacters;
+        public List<string> ableWeapons;
 
     }
 
