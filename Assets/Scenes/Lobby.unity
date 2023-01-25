@@ -9569,7 +9569,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 91.25
+  m_fontSize: 78.7
   m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16998,7 +16998,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 116.7
+  m_fontSize: 102.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -19319,7 +19319,7 @@ GameObject:
   - component: {fileID: 4323301381442612928}
   - component: {fileID: 4323301381442612933}
   - component: {fileID: 4323301381442612930}
-  - component: {fileID: 4323301381442612931}
+  - component: {fileID: 4323301381442612934}
   m_Layer: 5
   m_Name: Down
   m_TagString: Untagged
@@ -19357,7 +19357,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4323301381442612931
+--- !u!222 &4323301381442612933
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4323301381442612929}
+  m_CullTransparentMesh: 1
+--- !u!114 &4323301381442612934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19375,16 +19383,8 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 5
+  m_FlexibleHeight: 4
   m_LayoutPriority: 1
---- !u!222 &4323301381442612933
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4323301381442612929}
-  m_CullTransparentMesh: 1
 --- !u!224 &4323301381451695200
 RectTransform:
   m_ObjectHideFlags: 0

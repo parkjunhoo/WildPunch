@@ -123,13 +123,13 @@ public class UI_SelectView : UI_Base
         BindEvent(StagePreBtn, (PointerEventData) =>
         {
             StagePreBtnAnim.Play("CLICK");
-            Managers.Sound.Play(Managers.Data.GetCashedSound("ClickBoing"));
+            Managers.Sound.Play(Managers.Data.GetCashedSound("Click"));
             SelectStageIndex = (SelectStageIndex - 1) > -1 ? SelectStageIndex - 1 : _stageCodeList.Count - 1;
         });
         BindEvent(StageNextBtn, (PointerEventData) =>
         {
             StageNextBtnAnim.Play("CLICK");
-            Managers.Sound.Play(Managers.Data.GetCashedSound("ClickBoing"));
+            Managers.Sound.Play(Managers.Data.GetCashedSound("Click"));
             SelectStageIndex = (SelectStageIndex + 1) < _stageCodeList.Count ? SelectStageIndex + 1 : 0;
         });
     }
@@ -165,12 +165,12 @@ public class UI_SelectView : UI_Base
                     if(btn.HoldingCode != s_SelectCharacterCode)
                     {
                         SelectCharacterCode = characterInfo.code;
-                        Managers.Sound.Play(Managers.Data.GetCashedSound("ClickBoing"));
+                        Managers.Sound.Play(Managers.Data.GetCashedSound("Click"));
                     }
                 }
                 else
                 {
-                    Managers.Sound.Play(Managers.Data.GetCashedSound("UnLock"));
+                    Managers.Sound.Play(Managers.Data.GetCashedSound("ClickBoing"));
                 }
             });
         }
