@@ -51,6 +51,19 @@ public class UI_SelectView : UI_Base
 
     Dictionary<string, PlayableCharacterInfo> _characterDict;
 
+    public static string s_SelectWeaponCode = "0";
+
+    public string SelectWeaponCode
+    {
+        get { return s_SelectWeaponCode; }
+        set
+        {
+            s_SelectWeaponCode = value;
+            if (OnSelectWeaponChanged != null) OnSelectWeaponChanged.Invoke();
+
+        }
+    }
+    public static Action OnSelectWeaponChanged = null;
 
 
     public enum GameObjects

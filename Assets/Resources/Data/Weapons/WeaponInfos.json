@@ -65,7 +65,7 @@
         },
         {
             "code": "1",
-            "name": "CaneOfThunder",
+            "name": "리볼버",
             "synergy":["1","6"],
             "stat":
             [
@@ -128,7 +128,7 @@
         },
         {
             "code": "2",
-            "name": "CaneOfWater",
+            "name": "썬더스피어",
             "synergy":["2","6"],
             "stat":
             [
@@ -191,7 +191,7 @@
         },
         {
             "code": "3",
-            "name": "SteelSword",
+            "name": "수리검",
             "synergy":["0","7"],
             "stat":
             [
@@ -254,7 +254,7 @@
         },
         {
             "code": "4",
-            "name": "CaneOfFire",
+            "name": "오대식",
             "synergy":["3","6"],
             "stat":
             [
@@ -322,7 +322,7 @@
         },
         {
             "code": "5",
-            "name": "VampiricSword",
+            "name": "죽창",
             "synergy":["4","7"],
             "stat":
             [
@@ -391,7 +391,7 @@
         },
         {
             "code": "6",
-            "name": "Rifle",
+            "name": "샷건",
             "synergy":["0", "8"],
             "stat":
             [
@@ -449,7 +449,7 @@
         },
         {
             "code": "7",
-            "name": "Sniper",
+            "name": "볼케이노",
             "synergy":["0", "8"],
             "stat":
             [
@@ -507,7 +507,7 @@
         },
         {
             "code": "8",
-            "name": "ThiefSword",
+            "name": "칼리번",
             "synergy":["5","7"],
             "stat":
             [
