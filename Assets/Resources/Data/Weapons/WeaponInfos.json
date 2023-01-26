@@ -3,6 +3,7 @@
         {
             "code": "0",
             "name": "스팅어",
+            "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["0", "8"],
             "stat":
             [
@@ -66,6 +67,7 @@
         {
             "code": "1",
             "name": "리볼버",
+            "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["1","6"],
             "stat":
             [
@@ -129,6 +131,7 @@
         {
             "code": "2",
             "name": "썬더스피어",
+            "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["2","6"],
             "stat":
             [
@@ -192,6 +195,7 @@
         {
             "code": "3",
             "name": "수리검",
+            "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["0","7"],
             "stat":
             [
@@ -255,6 +259,7 @@
         {
             "code": "4",
             "name": "오대식",
+            "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["3","6"],
             "stat":
             [
@@ -323,6 +328,7 @@
         {
             "code": "5",
             "name": "죽창",
+            "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["4","7"],
             "stat":
             [
@@ -392,6 +398,7 @@
         {
             "code": "6",
             "name": "샷건",
+            "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["0", "8"],
             "stat":
             [
@@ -450,6 +457,7 @@
         {
             "code": "7",
             "name": "볼케이노",
+            "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["0", "8"],
             "stat":
             [
@@ -508,6 +516,7 @@
         {
             "code": "8",
             "name": "칼리번",
+            "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["5","7"],
             "stat":
             [

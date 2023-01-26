@@ -28,9 +28,9 @@ public class UI_CharacterSelectBtn : UI_Base
         Refresh();
         Managers.Data.OnUserDataChanged -= Refresh;
         Managers.Data.OnUserDataChanged += Refresh;
-        ChangeStage();
-        UI_SelectView.OnSelectCharacterChanged -= ChangeStage;
-        UI_SelectView.OnSelectCharacterChanged += ChangeStage;
+        ChangeCharacter();
+        UI_SelectView.OnSelectCharacterChanged -= ChangeCharacter;
+        UI_SelectView.OnSelectCharacterChanged += ChangeCharacter;
         
     }
 
@@ -48,7 +48,7 @@ public class UI_CharacterSelectBtn : UI_Base
         IsUnLocked = isUnLocked;
     }
 
-    public void ChangeStage()
+    public void ChangeCharacter()
     {
         if (HoldingCode == UI_SelectView.s_SelectCharacterCode) MaskImage.gameObject.SetActive(false);
         else MaskImage.gameObject.SetActive(true);

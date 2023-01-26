@@ -30,6 +30,8 @@ public class UI_SelectView : UI_Base
             StageCarousel.UI_StageCarousel.Index = s_SelectStageIndex;
         }
     }
+    Dictionary<string, StageInfo> _stageDict;
+    List<string> _stageCodeList;
 
 
 
@@ -44,15 +46,13 @@ public class UI_SelectView : UI_Base
             RefreshCharacterView();
         }
     }
-    public static Action OnSelectCharacterChanged = null;
-
-    Dictionary<string, StageInfo> _stageDict;
-    List<string> _stageCodeList;
-
     Dictionary<string, PlayableCharacterInfo> _characterDict;
+    public static Action OnSelectCharacterChanged = null;
+    
+
+
 
     public static string s_SelectWeaponCode = "0";
-
     public string SelectWeaponCode
     {
         get { return s_SelectWeaponCode; }
@@ -63,6 +63,7 @@ public class UI_SelectView : UI_Base
 
         }
     }
+    Dictionary<string, WeaponInfo> _weaponDict;
     public static Action OnSelectWeaponChanged = null;
 
 
@@ -74,9 +75,10 @@ public class UI_SelectView : UI_Base
 
         UI_MonsterList,
         UI_CharacterList,
+        UI_WeaponList,
         ChracterArea,
     }
-    GameObject UI_StageCarousel, StagePreBtn, StageNextBtn, UI_MonsterList, UI_CharacterList, ChracterArea;
+    GameObject UI_StageCarousel, StagePreBtn, StageNextBtn, UI_MonsterList, UI_CharacterList, UI_WeaponList, ChracterArea;
     Animator StagePreBtnAnim, StageNextBtnAnim;
 
     public enum Texts
@@ -86,15 +88,19 @@ public class UI_SelectView : UI_Base
 
         CharacterNameText,
         CharacterSubText,
+
+        WeaponNameText,
+        WeaponSubText,
     }
-    TextMeshProUGUI StageNameText, StageSubText, CharacterNameText, CharacterSubText;
+    TextMeshProUGUI StageNameText, StageSubText, CharacterNameText, CharacterSubText, WeaponNameText, WeaponSubText;
 
     public enum Images
     {
         BossImage,
         BossImage2,
+        WeaponIcon,
     }
-    Image BossImage, BossImage2;
+    Image BossImage, BossImage2, WeaponIcon;
 
     public override void Init()
     {
@@ -108,8 +114,11 @@ public class UI_SelectView : UI_Base
 
         UI_MonsterList = GetObject((int)GameObjects.UI_MonsterList);
         UI_CharacterList = GetObject((int)GameObjects.UI_CharacterList);
+        UI_WeaponList = GetObject((int)GameObjects.UI_WeaponList);
+
 
         ChracterArea = GetObject((int)GameObjects.ChracterArea);
+
 
         Bind<TextMeshProUGUI>(typeof(Texts));
         StageNameText = GetMeshText((int)Texts.StageNameText);
@@ -118,10 +127,13 @@ public class UI_SelectView : UI_Base
         CharacterNameText = GetMeshText((int)Texts.CharacterNameText);
         CharacterSubText = GetMeshText((int)Texts.CharacterSubText);
 
+        WeaponNameText = GetMeshText((int)Texts.WeaponNameText);
+        WeaponSubText = GetMeshText((int)Texts.WeaponSubText);
 
         Bind<Image>(typeof(Images));
         BossImage = GetImage((int)Images.BossImage);
         BossImage2 = GetImage((int)Images.BossImage2);
+        WeaponIcon = GetImage((int)Images.WeaponIcon);
 
         _stageDict = Managers.Data.StageDict;
         _stageCodeList = new List<string>();
@@ -130,9 +142,12 @@ public class UI_SelectView : UI_Base
         _characterDict = Managers.Data.PlayableCharacterDict;
         CharacterListUp();
 
+        _weaponDict = Managers.Data.WeaponDict;
+        WeaponListUp();
+
+
 
         RefreshStageView();
-
         BindEvent(StagePreBtn, (PointerEventData) =>
         {
             StagePreBtnAnim.Play("CLICK");
@@ -188,6 +203,36 @@ public class UI_SelectView : UI_Base
             });
         }
     }
+
+    public void WeaponListUp()
+    {
+        WeaponIcon.sprite = Managers.Data.GetCashedSprite($"UIWeapon{s_SelectWeaponCode}");
+        WeaponNameText.text = _weaponDict[s_SelectWeaponCode].name;
+        WeaponSubText.text = _weaponDict[s_SelectWeaponCode].subText;
+
+        foreach (WeaponInfo weaponInfo in Managers.Data.WeaponDict.Values)
+        {
+            GameObject go = Util.CashedPrefabInstantiate("UI_WeaponSelectBtn", UI_WeaponList.transform);
+            UI_WeaponSelectBtn btn = go.GetComponent<UI_WeaponSelectBtn>();
+            btn.Setting(weaponInfo.code);
+
+            BindEvent(go, (PointerEventData) =>
+            {
+                if (btn.IsUnLocked)
+                {
+                    if (btn.HoldingCode != s_SelectWeaponCode)
+                    {
+                        SelectWeaponCode = weaponInfo.code;
+                        Managers.Sound.Play(Managers.Data.GetCashedSound("Click"));
+                    }
+                }
+                else
+                {
+                    Managers.Sound.Play(Managers.Data.GetCashedSound("ClickBoing"));
+                }
+            });
+        }
+    }
     public void RefreshStageView()
     {
         StageInfo stageInfo = _stageDict[s_SelectStageCode];
@@ -216,5 +261,13 @@ public class UI_SelectView : UI_Base
         PlayableCharacterInfo chracterInfo = _characterDict[s_SelectCharacterCode];
         CharacterNameText.text = chracterInfo.name;
         CharacterSubText.text = chracterInfo.subText;
+    }
+
+    
+    public void RefreshWeaponView()
+    {
+        WeaponInfo weaponInfo = _weaponDict[s_SelectWeaponCode];
+        WeaponNameText.text = weaponInfo.name;
+        WeaponSubText.text = weaponInfo.subText;
     }
 }

@@ -107,6 +107,7 @@ namespace Data
     {
         public string code;
         public string name;
+        public string subText;
         public string[] synergy;
         public List<WeaponStat> stat;
     }
