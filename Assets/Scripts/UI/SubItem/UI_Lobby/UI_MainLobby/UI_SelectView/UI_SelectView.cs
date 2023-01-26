@@ -60,6 +60,7 @@ public class UI_SelectView : UI_Base
         {
             s_SelectWeaponCode = value;
             if (OnSelectWeaponChanged != null) OnSelectWeaponChanged.Invoke();
+            RefreshWeaponView();
 
         }
     }
@@ -230,7 +231,7 @@ public class UI_SelectView : UI_Base
                 {
                     Managers.Sound.Play(Managers.Data.GetCashedSound("ClickBoing"));
                 }
-            });
+            },Define.UIEvent.OnlyClick);
         }
     }
     public void RefreshStageView()
@@ -267,6 +268,7 @@ public class UI_SelectView : UI_Base
     public void RefreshWeaponView()
     {
         WeaponInfo weaponInfo = _weaponDict[s_SelectWeaponCode];
+        WeaponIcon.sprite = Managers.Data.GetCashedSprite($"UIWeapon{s_SelectWeaponCode}");
         WeaponNameText.text = weaponInfo.name;
         WeaponSubText.text = weaponInfo.subText;
     }

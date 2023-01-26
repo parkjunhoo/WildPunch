@@ -130,7 +130,7 @@
         },
         {
             "code": "2",
-            "name": "썬더스피어",
+            "name": "제우스",
             "subText":"근처 3명 적에게 <color=\"green\">2</color>의 데미지를 주고 <color=\"yellow\"></color>",
             "synergy":["2","6"],
             "stat":
