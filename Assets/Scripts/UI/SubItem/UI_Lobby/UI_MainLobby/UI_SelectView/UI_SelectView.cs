@@ -78,8 +78,10 @@ public class UI_SelectView : UI_Base
         UI_CharacterList,
         UI_WeaponList,
         ChracterArea,
+
+        PlayBtn,
     }
-    GameObject UI_StageCarousel, StagePreBtn, StageNextBtn, UI_MonsterList, UI_CharacterList, UI_WeaponList, ChracterArea;
+    GameObject UI_StageCarousel, StagePreBtn, StageNextBtn, UI_MonsterList, UI_CharacterList, UI_WeaponList, ChracterArea, PlayBtn;
     Animator StagePreBtnAnim, StageNextBtnAnim;
 
     public enum Texts
@@ -119,6 +121,8 @@ public class UI_SelectView : UI_Base
 
 
         ChracterArea = GetObject((int)GameObjects.ChracterArea);
+
+        PlayBtn = GetObject((int)(GameObjects.PlayBtn));
 
 
         Bind<TextMeshProUGUI>(typeof(Texts));
@@ -160,6 +164,10 @@ public class UI_SelectView : UI_Base
             StageNextBtnAnim.Play("CLICK");
             Managers.Sound.Play(Managers.Data.GetCashedSound("Click"));
             SelectStageIndex = (SelectStageIndex + 1) < _stageCodeList.Count ? SelectStageIndex + 1 : 0;
+        });
+        BindEvent(PlayBtn, (PointerEventData) =>
+        {
+            Managers.Scene.LoadScene(Define.Scene.Game);
         });
     }
 
